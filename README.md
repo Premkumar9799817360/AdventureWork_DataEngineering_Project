@@ -27,7 +27,7 @@ I used this dataset because it contains multiple CSV files with diverse data lik
 
 All datasets are uploaded to my GitHub repository.  
 Example dataset file:  
-📎 ![AdventureWorks Data](https://github.com/Premkumar9799817360/AdventureWork_DataEngineering_Project/tree/main/Data)
+![AdventureWorks Data](https://github.com/Premkumar9799817360/AdventureWork_DataEngineering_Project/tree/main/Data)
 ---
 🏗️ Architecture
 The project follows the Medallion Architecture with three layers:
@@ -35,7 +35,7 @@ The project follows the Medallion Architecture with three layers:
 - Bronze Layer 🥉 - Raw data storage
 - Silver Layer 🥈 - Cleaned and transformed data
 - Gold Layer 🥇 - Business-ready analytics data
-![Project Architecture](Premkumar9799817360/AdventureWork_DataEngineering_Project/blob/main/Project%20Image/Project%20Architecture.png)
+![Project Architecture](https://github.com/Premkumar9799817360/AdventureWork_DataEngineering_Project/blob/main/Project%20Image/Project%20Architecture.png)
 ---
 
 ## 🧩 Architecture: Medallion Approach  
