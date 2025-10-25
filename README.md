@@ -27,7 +27,7 @@ I used this dataset because it contains multiple CSV files with diverse data lik
 
 All datasets are uploaded to my GitHub repository.  
 Example dataset file:  
-📎 [`AdventureWorks_Products.csv`](Premkumar9799817360/AdventureWork_DataEngineering_Project/refs/heads/main/Data/AdventureWorks_Products.csv)
+📎 ![AdventureWorks Data](Premkumar9799817360/AdventureWork_DataEngineering_Project/refs/heads/main/Data/AdventureWorks_Products.csv)
 
 ---
 
