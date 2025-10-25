@@ -29,7 +29,8 @@ I used the **AdventureWorks** dataset because it contains multiple CSV files wit
 
 
 ---
-🏗️ Architecture
+🏗️ **Architecture**
+
 The project follows the Medallion Architecture with three layers:
 
 - Bronze Layer 🥉 - Raw data storage
@@ -60,6 +61,8 @@ The pipeline in Azure Data Factory includes the following activities:
 ![ADF Pipeline Success](https://github.com/Premkumar9799817360/AdventureWork_DataEngineering_Project/blob/main/Project%20Image/Pipeline_Successful_Run.jpg)
 
 After the pipeline ran successfully, all extracted datasets were automatically saved in my Azure Data Lake Gen2 storage under the Bronze layer for further processing.
+
+📸 *Bronze Layer Container:*
 ![Bronze Layer](https://github.com/Premkumar9799817360/AdventureWork_DataEngineering_Project/blob/main/Project%20Image/Bronze_Layer_container.jpg)
 
 ---
@@ -75,6 +78,9 @@ I created a **Silver Notebook** in Databricks to:
 📸 *Silver Layer Data in ADLS Gen2:*  
 ![Silver Layer Storage](https://github.com/Premkumar9799817360/AdventureWork_DataEngineering_Project/blob/main/Project%20Image/Silver_layer_container.jpg)
 
+📸 *Silver Layer Data*  
+![Silver Layer Storage Output](https://github.com/Premkumar9799817360/AdventureWork_DataEngineering_Project/blob/main/Project%20Image/Silver_layer_container_file_output.jpg)
+
 ---
 
 ### 🥇 Gold Layer (Analytics & Warehouse)
@@ -86,22 +92,13 @@ Steps:
 3. 📊 Created **External Tables** and **Views** using **CETAS (Create External Table As Select)**  
 
 📸 *SQL Query using OPENROWSET & BULK:*  
-![SQL Query in Synapse](Premkumar9799817360/AdventureWork_DataEngineering_Project/refs/heads/main/Images/sql_query.png)
+![SQL Query in Synapse](https://github.com/Premkumar9799817360/AdventureWork_DataEngineering_Project/blob/main/Project%20Image/Sql_script.jpg)
 
 📸 *Gold Layer Storage (ADLS Gen2):*  
-![Gold Layer Storage](Premkumar9799817360/AdventureWork_DataEngineering_Project/refs/heads/main/Images/gold_layer.png)
+![Gold Layer Storage](https://github.com/Premkumar9799817360/AdventureWork_DataEngineering_Project/blob/main/Project%20Image/Gold_layer_container_output.jpg)
 
 ---
 
-## 🧱 Project Workflow Summary  
-
-📈 **Project Flow:**  
-`GitHub (Raw Data)` → `ADF (Extract)` → `ADLS (Bronze)` → `Databricks (Transform)` → `ADLS (Silver)` → `Synapse (Gold)`  
-
-📸 *Overall Project Workflow:*  
-![Project Workflow](Premkumar9799817360/AdventureWork_DataEngineering_Project/refs/heads/main/Images/project_workflow.png)
-
----
 
 ## 🧩 Key Learnings  
 💡 Learned how to connect and integrate multiple Azure services  
@@ -118,9 +115,3 @@ I learned how to manage, extract, transform, and store large datasets using a re
 
 ---
 
-## 📫 Connect with Me  
-👨‍💻 **Author:** Prem Kumar  
-🔗 [GitHub Profile](https://github.com/Premkumar9799817360)  
-📧 Email: *Add your email here*  
-
----
