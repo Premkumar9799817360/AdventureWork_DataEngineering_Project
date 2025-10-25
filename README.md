@@ -18,16 +18,16 @@ To build a **robust and scalable data pipeline** using Azure services and implem
 
 ## 🗂️ Dataset Used  
 📦 **AdventureWorks Dataset**  
-I used this dataset because it contains multiple CSV files with diverse data like:  
+
+I used the **AdventureWorks** dataset because it contains multiple CSV files with diverse data such as:  
 - 🏷️ Product  
 - 📁 Product Categories  
 - 💵 Sales  
 - 🙍‍♂️ Customers  
 - 🔄 Returns  
 
-All datasets are uploaded to my GitHub repository.  
-Example dataset file:  
-![AdventureWorks Data](https://github.com/Premkumar9799817360/AdventureWork_DataEngineering_Project/tree/main/Data)
+
+
 ---
 🏗️ Architecture
 The project follows the Medallion Architecture with three layers:
@@ -35,25 +35,32 @@ The project follows the Medallion Architecture with three layers:
 - Bronze Layer 🥉 - Raw data storage
 - Silver Layer 🥈 - Cleaned and transformed data
 - Gold Layer 🥇 - Business-ready analytics data
+  
 ![Project Architecture](https://github.com/Premkumar9799817360/AdventureWork_DataEngineering_Project/blob/main/Project%20Image/Project%20Architecture.png)
 ---
 
 ## 🧩 Architecture: Medallion Approach  
 
 ### 🥉 Bronze Layer (Raw Data)
-In this layer, I extracted raw data from my GitHub using **Azure Data Factory (ADF)** via HTTPS.  
-I created a **dynamic ADF pipeline** that uses:  
-- 🔍 Lookup Activity  
-- 📤 Copy Data Activity  
-- 🔁 ForEach Activity  
+This project focuses on **data extraction** using a **REST API**.  
+I uploaded all the datasets to my **GitHub repository** so that they can be accessed through **HTTPS links**.  
+Using **Azure Data Factory (ADF)**, I built a **dynamic pipeline** that connects to GitHub and extracts data from all CSV files automatically.  
+Each dataset serves a different purpose, and the pipeline is designed to handle multiple files efficiently.  
 
-These activities extract multiple datasets and store them in **ADLS Gen2 (Bronze Layer)**.
+### 🔧 Pipeline Details  
+The pipeline in Azure Data Factory includes the following activities:  
+- **Lookup Activity** – reads the list of available files from GitHub  
+- **Copy Data Activity** – copies each dataset through HTTPS connection  
+- **ForEach Activity** – loops through all file names dynamically and extracts each dataset  
 
-📸 *ADF Pipeline Workflow:*  
-![ADF Pipeline](Premkumar9799817360/AdventureWork_DataEngineering_Project/refs/heads/main/Images/adf_pipeline.png)
+📸 *Azure Data Factory Pipeline:*  
+![ADF Pipeline](https://github.com/Premkumar9799817360/AdventureWork_DataEngineering_Project/blob/main/Project%20Image/Pipeline_workflow.jpg)
 
 📸 *Successful Pipeline Run:*  
-![ADF Pipeline Success](Premkumar9799817360/AdventureWork_DataEngineering_Project/refs/heads/main/Images/adf_pipeline_success.png)
+![ADF Pipeline Success](https://github.com/Premkumar9799817360/AdventureWork_DataEngineering_Project/blob/main/Project%20Image/Pipeline_Successful_Run.jpg)
+
+After the pipeline ran successfully, all extracted datasets were automatically saved in my Azure Data Lake Gen2 storage under the Bronze layer for further processing.
+![Bronze Layer](https://github.com/Premkumar9799817360/AdventureWork_DataEngineering_Project/blob/main/Project%20Image/Bronze_Layer_container.jpg)
 
 ---
 
@@ -66,7 +73,7 @@ I created a **Silver Notebook** in Databricks to:
 - 💾 Save transformed data back to **Silver Layer** in **Parquet format** (best for big data)
 
 📸 *Silver Layer Data in ADLS Gen2:*  
-![Silver Layer Storage](Premkumar9799817360/AdventureWork_DataEngineering_Project/refs/heads/main/Images/silver_layer.png)
+![Silver Layer Storage](https://github.com/Premkumar9799817360/AdventureWork_DataEngineering_Project/blob/main/Project%20Image/Silver_layer_container.jpg)
 
 ---
 
