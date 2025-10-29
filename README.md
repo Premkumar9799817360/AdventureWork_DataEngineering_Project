@@ -37,7 +37,7 @@ The project follows the Medallion Architecture with three layers:
 - Silver Layer 🥈 - Cleaned and transformed data
 - Gold Layer 🥇 - Business-ready analytics data
   
-![Project Architecture](https://github.com/Premkumar9799817360/AdventureWork_DataEngineering_Project/blob/main/Project%20Image/Project%20Architecture.png)
+![Project Architecture](https://github.com/Premkumar9799817360/AdventureWork_DataEngineering_Project/blob/main/Project_Architecture.png)
 ---
 
 ## 🧩 Architecture: Medallion Approach  
@@ -55,15 +55,15 @@ The pipeline in Azure Data Factory includes the following activities:
 - **ForEach Activity** – loops through all file names dynamically and extracts each dataset  
 
 📸 *Azure Data Factory Pipeline:*  
-![ADF Pipeline](https://github.com/Premkumar9799817360/AdventureWork_DataEngineering_Project/blob/main/Project%20Image/Pipeline_workflow.jpg)
+![ADF Pipeline](https://github.com/Premkumar9799817360/AdventureWork_DataEngineering_Project/blob/main/Pipeline_workflow.jpg)
 
 📸 *Successful Pipeline Run:*  
-![ADF Pipeline Success](https://github.com/Premkumar9799817360/AdventureWork_DataEngineering_Project/blob/main/Project%20Image/Pipeline_Successful_Run.jpg)
+![ADF Pipeline Success](https://github.com/Premkumar9799817360/AdventureWork_DataEngineering_Project/blob/main/Pipeline_Successful_Run.jpg)
 
 After the pipeline ran successfully, all extracted datasets were automatically saved in my Azure Data Lake Gen2 storage under the Bronze layer for further processing.
 
 📸 *Bronze Layer Container:*
-![Bronze Layer](https://github.com/Premkumar9799817360/AdventureWork_DataEngineering_Project/blob/main/Project%20Image/Bronze_Layer_container.jpg)
+![Bronze Layer](https://github.com/Premkumar9799817360/AdventureWork_DataEngineering_Project/blob/main/Bronze_Layer_container.jpg)
 
 ---
 
@@ -76,10 +76,10 @@ I created a **Silver Notebook** in Databricks to:
 - 💾 Save transformed data back to **Silver Layer** in **Parquet format** (best for big data)
 
 📸 *Silver Layer Data in ADLS Gen2:*  
-![Silver Layer Storage](https://github.com/Premkumar9799817360/AdventureWork_DataEngineering_Project/blob/main/Project%20Image/Silver_layer_container.jpg)
+![Silver Layer Storage](https://github.com/Premkumar9799817360/AdventureWork_DataEngineering_Project/blob/main/Silver_layer_container.jpg)
 
 📸 *Silver Layer Data*  
-![Silver Layer Storage Output](https://github.com/Premkumar9799817360/AdventureWork_DataEngineering_Project/blob/main/Project%20Image/Silver_layer_container_file_output.jpg)
+![Silver Layer Storage Output](https://github.com/Premkumar9799817360/AdventureWork_DataEngineering_Project/blob/main/Silver_layer_container_file_output.jpg)
 
 ---
 
@@ -92,10 +92,10 @@ Steps:
 3. 📊 Created **External Tables** and **Views** using **CETAS (Create External Table As Select)**  
 
 📸 *SQL Query using OPENROWSET & BULK:*  
-![SQL Query in Synapse](https://github.com/Premkumar9799817360/AdventureWork_DataEngineering_Project/blob/main/Project%20Image/Sql_script.jpg)
+![SQL Query in Synapse](https://github.com/Premkumar9799817360/AdventureWork_DataEngineering_Project/blob/main/Sql_script.jpg)
 
 📸 *Gold Layer Storage (ADLS Gen2):*  
-![Gold Layer Storage](https://github.com/Premkumar9799817360/AdventureWork_DataEngineering_Project/blob/main/Project%20Image/Gold_layer_container_output.jpg)
+![Gold Layer Storage](https://github.com/Premkumar9799817360/AdventureWork_DataEngineering_Project/blob/main/Gold_layer_container_output.jpg)
 
 ---
 
