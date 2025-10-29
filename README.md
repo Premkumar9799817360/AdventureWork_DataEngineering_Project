@@ -17,7 +17,7 @@ To build a **robust and scalable data pipeline** using Azure services and implem
 
 
 ## 🗂️ Dataset Used  
-📦 **AdventureWorks Dataset**  
+#### 📦 AdventureWorks Dataset  
 
 I used the **AdventureWorks** dataset because it contains multiple CSV files with diverse data such as:  
 - 🏷️ Product  
@@ -29,7 +29,7 @@ I used the **AdventureWorks** dataset because it contains multiple CSV files wit
 
 
 ---
-🏗️ **Architecture**
+#### 🏗️ Architecture
 
 The project follows the Medallion Architecture with three layers:
 
@@ -54,17 +54,17 @@ The pipeline in Azure Data Factory includes the following activities:
 - **Copy Data Activity** – copies each dataset through HTTPS connection  
 - **ForEach Activity** – loops through all file names dynamically and extracts each dataset  
 
-📸 *Azure Data Factory Pipeline:*  
+##### 📸 Azure Data Factory Pipeline:
 
 ![ADF Pipeline](https://github.com/Premkumar9799817360/AdventureWork_DataEngineering_Project/blob/main/Pipeline_workflow.jpg)
 
-📸 *Successful Pipeline Run:*  
+##### 📸 Successful Pipeline Run:
 
 ![ADF Pipeline Success](https://github.com/Premkumar9799817360/AdventureWork_DataEngineering_Project/blob/main/Pipeline_Successful_Run.jpg)
 
 After the pipeline ran successfully, all extracted datasets were automatically saved in my Azure Data Lake Gen2 storage under the Bronze layer for further processing.
 
-📸 *Bronze Layer Container:*
+##### 📸 Bronze Layer Container:
 ![Bronze Layer](https://github.com/Premkumar9799817360/AdventureWork_DataEngineering_Project/blob/main/Bronze_Layer_container.jpg)
 
 
@@ -76,11 +76,11 @@ I created a **Silver Notebook** in Databricks to:
 - 🧹 Apply data cleaning and transformations  
 - 💾 Save transformed data back to **Silver Layer** in **Parquet format** (best for big data)
 
-📸 *Silver Layer Data in ADLS Gen2:*  
+##### 📸 Silver Layer Data in ADLS Gen2
 
 ![Silver Layer Storage](https://github.com/Premkumar9799817360/AdventureWork_DataEngineering_Project/blob/main/Silver_layer_container.jpg)
 
-📸 *Silver Layer Data*  
+##### 📸 Silver Layer Data 
 
 ![Silver Layer Storage Output](https://github.com/Premkumar9799817360/AdventureWork_DataEngineering_Project/blob/main/Silver_layer_container_file_output.jpg)
 
@@ -93,11 +93,11 @@ Steps:
 2. 🔗 Used **OPENROWSET** and **BULK functions** to load Silver data into Synapse  
 3. 📊 Created **External Tables** and **Views** using **CETAS (Create External Table As Select)**  
 
-📸 *SQL Query using OPENROWSET & BULK:* 
+##### 📸 SQL Query using OPENROWSET & BULK
 
 ![SQL Query in Synapse](https://github.com/Premkumar9799817360/AdventureWork_DataEngineering_Project/blob/main/Sql_script.jpg)
 
-📸 *Gold Layer Storage (ADLS Gen2):*  
+##### 📸 Gold Layer Storage (ADLS Gen2)  
 
 ![Gold Layer Storage](https://github.com/Premkumar9799817360/AdventureWork_DataEngineering_Project/blob/main/Gold_layer_container_output.jpg)
 
